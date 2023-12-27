@@ -1,6 +1,6 @@
 package polybool.lib;
 
-import polybool.lib.Intersecter.Segment;
+import polybool.lib.Types.Segment;
 import uuid.Uuid;
 
 class SegmentSelector {

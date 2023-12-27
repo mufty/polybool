@@ -2,13 +2,13 @@
     "name": "polybool",
     "url": "https://github.com/mufty/polybool",
     "license": "MIT",
-    "tags": [],
+    "tags": ["haxe", "utility", "poly", "boolean", "csg", "2d"],
     "description": "Implementation of 2D boolean operations. Supports union, intersect, difference, reverse difference, xor.",
     "version": "0.0.1",
     "classPath": "src/",
     "releasenote": "Initial release",
     "contributors": ["mufty"],
     "dependencies": {
-      
+      "uuid": "2.4.1"
     }
   }

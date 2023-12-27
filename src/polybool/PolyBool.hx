@@ -1,26 +1,12 @@
 package polybool;
 
-import tools.polybool.lib.SegmentChainer;
-import tools.polybool.lib.SegmentSelector;
-import h2d.col.Point;
-import tools.polybool.lib.Intersecter;
-import tools.polybool.lib.Epsilon;
-
-typedef Poly = {
-    regions: Array<Array<Point>>,
-    inverted: Bool
-};
-
-typedef Segments = {
-    segments: Array<Segment>,
-    inverted: Bool
-};
-
-typedef CombinedSegments = {
-    combined: Array<Segment>,
-    inverted1: Bool,
-    inverted2: Bool
-};
+import polybool.lib.Types.CombinedSegments;
+import polybool.lib.Types.Poly;
+import polybool.lib.Types.Segments;
+import polybool.lib.SegmentChainer;
+import polybool.lib.SegmentSelector;
+import polybool.lib.Intersecter;
+import polybool.lib.Epsilon;
 
 //https://github.com/velipso/polybooljs
 class PolyBool {

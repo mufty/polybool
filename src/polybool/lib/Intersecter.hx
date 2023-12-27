@@ -1,103 +1,10 @@
 package polybool.lib;
 
-import polybool.lib.LinkedList.Transition;
-import polybool.lib.LinkedList.Node;
-import h2d.col.Point;
+import polybool.lib.Types.Transition;
+import polybool.lib.Types.Point;
+import polybool.lib.Types.Segment;
+import polybool.lib.Types.Node;
 import uuid.Uuid;
-
-/*class Event implements LinkedListItem
-{
-    public static final DEFAULT_SEGMENT:Segment ={
-        id: null,
-        start: null,
-        end: null,
-        myFill: {
-            above: false, // is there fill above us?
-            below: false  // is there fill below us?
-        },
-        otherFill: null
-    };
-    // nothing to implement, a macro automatically creates the necessary fields
-    public var isStart:Bool;
-    public var pt:Point;
-	public var seg:Segment;
-    public var primary:Bool;
-    public var other:Event;
-    public var status:Event;
-
-    public var next(get, set):Event;
-    public function get_next(){
-        return __next;
-    }
-    public function set_next(e:Event) {
-        return __next = e;
-    }
-
-    public var prev(get, set):Event;
-    public function get_prev(){
-        return __prev;
-    }
-    public function set_prev(e:Event) {
-        return __prev = e;
-    }
-
-    public function new(){}
-
-    public function remove() {
-        prev.next = next;
-        if (next != null)
-            next.prev = prev;
-        prev = null;
-        next = null;
-    }
-}*/
-
-/*class Event
-{
-    public static final DEFAULT_SEGMENT:Segment ={
-        id: null,
-        start: null,
-        end: null,
-        myFill: {
-            above: false, // is there fill above us?
-            below: false  // is there fill below us?
-        },
-        otherFill: null
-    };
-    // nothing to implement, a macro automatically creates the necessary fields
-    public var isStart:Bool;
-    public var pt:Point;
-	public var seg:Segment;
-    public var primary:Bool;
-    public var other:Event;
-    public var status:Event;
-
-    public var next:Event;
-    public var prev:Event;
-
-    public function new(){}
-
-    public function remove() {
-        prev.next = next;
-        if (next != null)
-            next.prev = prev;
-        prev = null;
-        next = null;
-    }
-}*/
-
-typedef Fill = {
-    above:Null<Bool>,
-    below:Null<Bool>
-};
-
-typedef Segment = {
-    var id:String;
-    var start:Point;
-    var end:Point;
-    var myFill:Fill;
-    var otherFill:Fill;
-}
 
 class Intersecter {
 

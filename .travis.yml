@@ -8,6 +8,7 @@ haxe:
  - "development"
 
 install:
+ - haxelib install uuid
  - haxelib dev polybool .
 
 script:

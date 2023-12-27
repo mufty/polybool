@@ -6,7 +6,7 @@
         {
             "label": "HaxeActiveConf",
             "type": "haxe",
-            "args": "test.hxml",
+            "args": "build.hxml",
             "problemMatcher": [
                 "$haxe-absolute",
                 "$haxe",
@@ -20,12 +20,6 @@
                 "kind": "build",
                 "isDefault": true
             },
-        },
-        {
-            "label": "LangParser",
-            "type": "shell",
-            "command": "haxe tools.langParser.hxml",
-            "group": "none",
         },
     ]
 }

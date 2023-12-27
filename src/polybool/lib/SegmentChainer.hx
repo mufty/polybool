@@ -1,7 +1,7 @@
 package polybool.lib;
 
-import h2d.col.Point;
-import polybool.lib.Intersecter.Segment;
+import polybool.lib.Types.Segment;
+import polybool.lib.Types.Point;
 
 class SegmentChainer {
     public static function chain(segments:Array<Segment>, eps:Epsilon):Array<Array<Point>>{

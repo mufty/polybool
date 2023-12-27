@@ -1,6 +1,6 @@
 package polybool.lib;
 
-import h2d.col.Point;
+import polybool.lib.Types.Point;
 
 class Epsilon {
     var eps:Float = 0.0000000001;
@@ -127,7 +127,7 @@ class Epsilon {
         var ret = {
             alongA: 0,
             alongB: 0,
-            pt: new Point(a0.x + A * adx, a0.y + A * ady)
+            pt: {x:a0.x + A * adx, y:a0.y + A * ady}
         };
 
         // categorize where intersection point is along A and B
