@@ -1,0 +1,21 @@
+sudo: required
+dist: trusty
+
+language: haxe
+
+haxe:
+ - "4.3.2"
+ - "development"
+
+install:
+ - haxelib dev polybool .
+
+script:
+ - haxe test.hxml
+
+deploy:
+ - provider: script
+   haxe: 4.3.2
+   script: bash ./release_haxelib.sh $HAXELIB_PWD
+   on:
+	       tags: true
