@@ -4,9 +4,9 @@
     "license": "MIT",
     "tags": ["haxe", "utility", "poly", "boolean", "csg", "2d"],
     "description": "Implementation of 2D boolean operations. Supports union, intersect, difference, reverse difference, xor.",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "classPath": "src/",
-    "releasenote": "Automating publishing",
+    "releasenote": "Expose all functions",
     "contributors": ["mufty"],
     "dependencies": {
       "uuid": "2.4.1"
