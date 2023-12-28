@@ -10,7 +10,7 @@ import polybool.lib.Epsilon;
 
 //https://github.com/velipso/polybooljs
 class PolyBool {
-    static var epsilon = new Epsilon();
+    public static var epsilon = new Epsilon();
 
     public static function epsilonFn(v:Float){
 		return epsilon.epsilon(v);
