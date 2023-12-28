@@ -12,11 +12,11 @@ import polybool.lib.Epsilon;
 class PolyBool {
     static var epsilon = new Epsilon();
 
-    static function epsilonFn(v:Float){
+    public static function epsilonFn(v:Float){
 		return epsilon.epsilon(v);
 	}
 
-    static function segments(poly:Poly):Segments {
+    public static function segments(poly:Poly):Segments {
 		var i = new Intersecter(true, epsilon);
         for(r in poly.regions){
             i.addRegion(r);
@@ -27,7 +27,7 @@ class PolyBool {
 		};
 	}
 
-    static function combine(segments1:Segments, segments2:Segments):CombinedSegments {
+    public static function combine(segments1:Segments, segments2:Segments):CombinedSegments {
 		var i3 = new Intersecter(false, epsilon);
 		return {
 			combined: i3.calculate2(
@@ -39,49 +39,49 @@ class PolyBool {
 		};
 	}
 
-    static function selectUnion(combined:CombinedSegments):Segments {
+    public static function selectUnion(combined:CombinedSegments):Segments {
 		return {
 			segments: SegmentSelector.union(combined.combined),
 			inverted: combined.inverted1 || combined.inverted2
 		}
 	}
 
-    static function selectIntersect(combined:CombinedSegments):Segments {
+    public static function selectIntersect(combined:CombinedSegments):Segments {
 		return {
 			segments: SegmentSelector.intersect(combined.combined),
 			inverted: combined.inverted1 && combined.inverted2
 		}
 	}
 
-    static function selectDifference(combined:CombinedSegments):Segments {
+    public static function selectDifference(combined:CombinedSegments):Segments {
 		return {
 			segments: SegmentSelector.difference(combined.combined),
 			inverted: combined.inverted1 && !combined.inverted2
 		}
 	}
 
-    static function selectDifferenceRev(combined:CombinedSegments):Segments{
+    public static function selectDifferenceRev(combined:CombinedSegments):Segments{
 		return {
 			segments: SegmentSelector.differenceRev(combined.combined),
 			inverted: !combined.inverted1 && combined.inverted2
 		}
 	}
 
-    static function selectXor(combined:CombinedSegments):Segments{
+    public static function selectXor(combined:CombinedSegments):Segments{
 		return {
 			segments: SegmentSelector.xor(combined.combined),
 			inverted: combined.inverted1 != combined.inverted2
 		}
 	}
 
-    static function polygon(segments:Segments):Poly{
+    public static function polygon(segments:Segments):Poly{
 		return {
 			regions: SegmentChainer.chain(segments.segments, epsilon),
 			inverted: segments.inverted
 		};
 	}
 
-    static function operate(poly1:Poly, poly2:Poly, selector:CombinedSegments->Segments):Poly {
+    public static function operate(poly1:Poly, poly2:Poly, selector:CombinedSegments->Segments):Poly {
         var seg1 = PolyBool.segments(poly1);
         var seg2 = PolyBool.segments(poly2);
         var comb = PolyBool.combine(seg1, seg2);
