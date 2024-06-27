@@ -7,6 +7,9 @@ class SegmentSelector {
 
     static function select(segments:Array<Segment>, selection:Array<Int>):Array<Segment> {
         var result = [];
+        if(segments == null)
+            return result;
+        
         for(seg in segments){
             var index =
                 (seg.myFill.above ? 8 : 0) +
